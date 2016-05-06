@@ -5,7 +5,6 @@ from werkzeug.debug import DebuggedApplication
 
 @Request.application
 def hello_world(request):
-    1/0
     result = ['<title>Greeeter</title>']
     if request.method == 'POST':
         result.append('<h1>Hello %s!</h1>' % escape(request.form['name']))
